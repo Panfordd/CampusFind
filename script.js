@@ -188,3 +188,14 @@ if (itemDetailsContainer) {
         itemDetailsContainer.textContent = "Item not found.";
     }
 }
+
+
+// Return to the previous page
+
+function goBack() {
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "index.html";
+    }
+}
