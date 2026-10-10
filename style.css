@@ -250,3 +250,86 @@ body {
         padding: 12px;
     }
 }
+
+/* How CampusFind Works */
+
+.how-it-works {
+    padding: 75px 6%;
+    background-color: white;
+    text-align: center;
+}
+
+.section-label {
+    color: #a93c40;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.how-it-works h2 {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.section-description {
+    color: #666666;
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0 auto 40px;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step-card {
+    background-color: #faf8f5;
+    padding: 35px 25px;
+    border-radius: 12px;
+    border: 1px solid #eeeeee;
+    text-align: left;
+}
+
+.step-number {
+    color: #a93c40;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.step-card h3 {
+    font-size: 21px;
+    margin: 20px 0 12px;
+}
+
+.step-card p {
+    color: #666666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Larger screens */
+@media (min-width: 900px) {
+    .steps-container {
+        flex-direction: row;
+    }
+
+    .step-card {
+        flex: 1;
+    }
+
+    .how-it-works h2 {
+        font-size: 40px;
+    }
+}
+
+/* Interactive card effect */
+.step-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
