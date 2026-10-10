@@ -414,3 +414,54 @@ body {
         font-size: 40px;
     }
 }
+
+/* Browse Items page */
+
+.browse-section {
+    padding: 70px 6%;
+    background-color: #faf8f5;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.browse-section h1 {
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 750px;
+    margin: 35px auto;
+}
+
+.search-container input,
+.search-container select {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    background-color: white;
+    width: 100%;
+}
+
+.search-container input:focus,
+.search-container select:focus {
+    outline: 2px solid #a93c40;
+}
+
+@media (min-width: 768px) {
+    .search-container {
+        flex-direction: row;
+    }
+
+    .search-container input {
+        flex: 2;
+    }
+
+    .search-container select {
+        flex: 1;
+    }
+}

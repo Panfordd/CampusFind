@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusFind | Ashesi University</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/ashesi-logo.png" alt="Ashesi University Logo">
+            <span>CampusFind</span>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        &#9776;
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Browse Items</a></li>
+            
+        </ul>
+
+        <a href="report.html" class="report-btn">+ Report an Item</a>
+
+    </nav>
+    </header>
+
+    <main>
+    <section class="browse-section">
+        <p class="section-label">ASHESI LOST & FOUND</p>
+        <h1>Browse Reported Items</h1>
+
+        <p class="section-description">
+            Explore items reported as lost or found
+            around the Ashesi campus.
+        </p>
+
+        <div class="search-container">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search for an item..."
+                aria-label="Search for an item"
+            >
+
+            <select id="type-filter" aria-label="Filter by report type">
+                <option value="All">All Items</option>
+                <option value="Lost">Lost Items</option>
+                <option value="Found">Found Items</option>
+            </select>
+        </div>
+
+        <div class="items-container" id="browse-items-container">
+            <!-- JavaScript will display the items here -->
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
