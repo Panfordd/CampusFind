@@ -1,0 +1,169 @@
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 4%;
+    background-color: white;
+    border-bottom: 1px solid #eeeeee;
+}
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 55px;
+    height: auto;
+}
+
+.logo span {
+    font-size: 23px;
+    font-weight: bold;
+    color: #a93c40;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #a93c40;
+}
+
+/* Report button */
+.report-btn {
+    background-color: #a93c40;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.report-btn:hover {
+    background-color: #842e32;
+}
+
+
+/* Homepage hero section - mobile first */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 60px 6%;
+    background-color: #faf8f5;
+}
+
+.hero-label {
+    color: #a93c40;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    color: #222222;
+    margin: 20px 0;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555555;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.browse-btn,
+.hero-report-btn {
+    padding: 15px 22px;
+    border-radius: 7px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.browse-btn {
+    background-color: #a93c40;
+    color: white;
+}
+
+.hero-report-btn {
+    background-color: white;
+    color: #a93c40;
+    border: 2px solid #a93c40;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* Larger screens */
+@media (min-width: 900px) {
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 90px 7%;
+        gap: 50px;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 50%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    .hero-image img {
+        height: 420px;
+    }
+}
