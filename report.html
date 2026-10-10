@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusFind | Ashesi University</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/ashesi-logo.png" alt="Ashesi University Logo">
+            <span>CampusFind</span>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        &#9776;
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Browse Items</a></li>
+            
+        </ul>
+
+        <a href="report.html" class="report-btn">+ Report an Item</a>
+
+    </nav>
+    </header>
+
+    <main>
+    <section class="report-section">
+
+        <p class="section-label">HELP YOUR COMMUNITY</p>
+        <h1>Report an Item</h1>
+
+        <p class="section-description">
+            Lost something or found an item on campus?
+            Fill out the form below to create a report.
+        </p>
+
+        <form id="report-form">
+
+            <div class="form-group">
+                <label for="item-type">Report Type</label>
+                <select id="item-type" required>
+                    <option value="">Select report type</option>
+                    <option value="Lost">Lost Item</option>
+                    <option value="Found">Found Item</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="item-name">Item Name</label>
+                <input
+                    type="text"
+                    id="item-name"
+                    placeholder="e.g. Black Calculator"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="item-category">Category</label>
+                <select id="item-category" required>
+                    <option value="">Select category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="ID Cards">ID Cards</option>
+                    <option value="Bags">Bags</option>
+                    <option value="Personal Items">Personal Items</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="item-location">Location</label>
+                <input
+                    type="text"
+                    id="item-location"
+                    placeholder="e.g. Ashesi Library"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="item-date">Date Lost or Found</label>
+                <input type="date" id="item-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="item-description">Description</label>
+                <textarea
+                    id="item-description"
+                    rows="5"
+                    placeholder="Describe the item..."
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit Report
+            </button>
+
+            <p id="form-message" role="status"></p>
+
+        </form>
+    </section>
+    </main>
+
+</body>
+</html>

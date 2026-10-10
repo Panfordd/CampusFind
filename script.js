@@ -112,3 +112,40 @@ if (browseItemsContainer) {
     searchInput.addEventListener("input", filterItems);
     typeFilter.addEventListener("change", filterItems);
 }
+
+// Report an Item form
+
+const reportForm = document.getElementById("report-form");
+const formMessage = document.getElementById("form-message");
+
+if (reportForm) {
+    reportForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const itemType = document.getElementById("item-type").value;
+        const itemName = document.getElementById("item-name").value.trim();
+        const itemCategory = document.getElementById("item-category").value;
+        const itemLocation = document.getElementById("item-location").value.trim();
+        const itemDate = document.getElementById("item-date").value;
+        const itemDescription = document.getElementById("item-description").value.trim();
+
+        if (
+            itemType === "" ||
+            itemName === "" ||
+            itemCategory === "" ||
+            itemLocation === "" ||
+            itemDate === "" ||
+            itemDescription === ""
+        ) {
+            formMessage.textContent = "Please fill in all fields.";
+            formMessage.style.color = "red";
+        } else {
+            formMessage.textContent =
+                "Your report has been validated successfully! This is a demo, so the report has not been saved.";
+
+            formMessage.style.color = "green";
+
+            reportForm.reset();
+        }
+    });
+}
