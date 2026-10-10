@@ -149,3 +149,42 @@ if (reportForm) {
         }
     });
 }
+
+// Item Details page
+
+const itemDetailsContainer = document.getElementById("item-details-container");
+
+if (itemDetailsContainer) {
+
+    // Get the item ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemId = Number(urlParams.get("id"));
+
+    let selectedItem = null;
+
+    // Find the item with the matching ID
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].id === itemId) {
+            selectedItem = items[i];
+            break;
+        }
+    }
+
+    // Display the selected item
+    if (selectedItem !== null) {
+        itemDetailsContainer.innerHTML = `
+            <div class="item-card">
+                <span class="item-type">${selectedItem.type}</span>
+
+                <h2>${selectedItem.name}</h2>
+
+                <p><strong>Category:</strong> ${selectedItem.category}</p>
+                <p><strong>Location:</strong> ${selectedItem.location}</p>
+                <p><strong>Date:</strong> ${selectedItem.date}</p>
+                <p><strong>Description:</strong> ${selectedItem.description}</p>
+            </div>
+        `;
+    } else {
+        itemDetailsContainer.textContent = "Item not found.";
+    }
+}
